@@ -37,8 +37,7 @@ def index():
 @app.route('/booked_tours')
 def booked_tours():
     orders = Order.query.all()
-    print(orders)
-    return render_template('booked_tours.html', orders=orders)
+    return render_template('booked_tours.html', booked_tours=orders)
 
 
 @app.route('/add_tour', methods=['GET', 'POST'])
